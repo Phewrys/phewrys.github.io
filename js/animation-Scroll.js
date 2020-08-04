@@ -1,3 +1,4 @@
+// It serves to decrease the number of times the function is called, avoiding poor performance.
 const debounce = function (func, wait, immediate) {
     let timeout;
     return function (...args) {
@@ -13,11 +14,14 @@ const debounce = function (func, wait, immediate) {
     };
 };
 
+
+// Animation Scroll - JavaScript
+// https://www.youtube.com/watch?v=pKTOT63X9XQ&list=LLNSJDO4FhPCoC8_341tbGmg&index=24&t=2s
 const target = document.querySelectorAll('[data-anime]');
 const animationClass = 'animate';
 
 function animeScroll() {
-    const windowTop = window.pageYOffset + 700;
+    const windowTop = window.pageYOffset + 600;
     target.forEach(function (element) {
         if ((windowTop) > element.offsetTop) {
             element.classList.add(animationClass);
@@ -35,8 +39,10 @@ if (target.length) {
     }, 200));
 }
 
-// Animation Voluntary
-(function () {
+
+// Animation Scroll Voluntary - jQuery
+// https://www.youtube.com/watch?v=e3NhP1nt-lY&list=LLNSJDO4FhPCoC8_341tbGmg&index=23&t=0s
+(function () { // LEFT
     var $targetx = $('.anime-left'),
         animationClass = 'anime-start',
         offset = $(window).height() * 4 / 5;
@@ -61,7 +67,7 @@ if (target.length) {
     }, 200));
 })();
 
-(function () {
+(function () { // RIGHT
     var $targety = $('.anime-right'),
         animationClass = 'anime-start',
         offset = $(window).height() * 4 / 5;

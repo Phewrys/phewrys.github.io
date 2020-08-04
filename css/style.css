@@ -13,7 +13,7 @@
     margin: 0;
     border: 0;
     background: transparent;
-    font-family: 'Roboto Mono', cursive;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.5;
 }
 
@@ -55,24 +55,12 @@ p {
     font-size: 16px;
 }
 
-h1 {
-    font-family: 'Roboto Mono', monospace;
-}
-
 h1, h2, h3 {
     text-align: center;
 }
 
 h2 {
     font-size: 30px;
-    font-family: -apple-system,
-                 BlinkMacSystemFont,
-                 "Segoe UI",Roboto,
-                 "Helvetica Neue",
-                 Arial,sans-serif,
-                 "Apple Color Emoji",
-                 "Segoe UI Emoji",
-                 "Segoe UI Symbol";
     text-transform: uppercase;
     font-weight: bolder;
     line-height: 100px;
@@ -86,17 +74,6 @@ h3 {
     color: #00fff3;
 }
 
-h4 {
-    font-family: -apple-system,
-                 BlinkMacSystemFont,
-                 "Segoe UI",Roboto,
-                 "Helvetica Neue",
-                 Arial,sans-serif,
-                 "Apple Color Emoji",
-                 "Segoe UI Emoji",
-                 "Segoe UI Symbol";
-}
-
 /* Header */
 section#header {
     height: 70px;
@@ -105,7 +82,6 @@ section#header {
     top:0;
     left: 0;
     z-index: 1000;
-    font-family: inherit;
     background-color: #1b1b1b;
 }
 
@@ -135,33 +111,26 @@ section#header a {
 
 #button {
     margin-top: 7px;
+    margin-bottom: 7px;
 }
 
 [menuShow] {
     margin-top: 0;
-    color: #00fff3;
-    border: 5px solid transparent;
+    border: 5px solid #1b1b1b;
+    background-color: #1b1b1b;
 }
 
 [menuShow] > ul > li > a {
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 [menuShow] > ul > li > a:hover {
-    transform: scale(1.2);
+    transform: scale(1.04);
 }
 
 section#header li a {
     padding-left: 10px;
     padding-right: 10px;
-    font-family: -apple-system,
-                 BlinkMacSystemFont,
-                 "Segoe UI",Roboto,
-                 "Helvetica Neue",
-                 Arial,sans-serif,
-                 "Apple Color Emoji",
-                 "Segoe UI Emoji",
-                 "Segoe UI Symbol";
 }
 
 section#header li a:hover {
@@ -177,12 +146,10 @@ section.home {
     margin-top: -30px;
     height: 615px;
     overflow: hidden;
-    font-family: 'Roboto Mono', monospace;
 }
 
 section.home span {
     overflow: hidden;
-    font-family: sans-serif;
 }
 
 section.home div {
@@ -226,7 +193,7 @@ section.home i {
 
 }
 
-/***** Animation *****/
+/***** Animation Write *****/
 .anim-typewriter {
     animation: typewriter 5s steps(22) 500ms infinite,
     blinkTextCursor 500ms steps(22) infinite normal;
@@ -311,7 +278,7 @@ svg {
     transition: 1s ease-in-out;
     width: 160px;
 }
-  
+ 
 [btn]:hover {
     transition: 1s ease-in-out;
     transform: scale(1.2);
@@ -359,22 +326,30 @@ section#skills > div > div {
 section#skills > div > div > div {
     border-radius: 0%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 50px;
-    width: 135px;
     font-size: 14pt;
     margin: 15px;
-    background-color: rgba(255, 255, 255, 0.1);
     color: #00fff3;
-    transition: 0.5s ease-in-out;
+    transition: 0.7s ease-in-out;
+    height: 200px;
+    width: 200px;
+    background-color: #18191a;
 }
 
 section#skills > div > div > div:hover {
     transform: scale(1.2);
-    font-size: 18px;
-    background-color: rgba(0, 255, 243, 0.1);
-    overflow: hidden;
+}
+
+section#skills > div > div > div i {
+    transition: 0.7s ease-in-out;
+}
+
+section#skills > div > div > div:hover i {
+    transform: rotateY(360deg);
+    color: #00fff3 !important;
+    box-shadow: 5px 5px 50px #00fff3;
 }
 
 .sSon1 {
@@ -497,17 +472,11 @@ section#contact span:hover {
 
 .btn {
     border-radius: 0px;
-    font-family: 'Roboto', sans-serif;
 }
 
 #form {
     margin-top: 2px;
     margin-bottom: 20px;
-}
-
-form,
-textarea {
-    margin: 0;
 }
 
 .form-bg .name {
@@ -521,23 +490,23 @@ textarea {
     border: 1px solid #00fff3;
 }
 
-input,
-textarea {
-    line-height: normal;
+form {
+    margin: 0;
 }
 
 input {
     margin: 0;
     vertical-align: baseline;
-}
-
-input,
-textarea {
-    font-family: sans-serif;
-}
-
-input {
     overflow: visible;
+    line-height: normal;
+}
+
+textarea {
+    margin: 0;
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+    line-height: normal;
 }
 
 .form-bg .email {
@@ -566,17 +535,7 @@ input {
     border: 1px solid #00fff3;
 }
 
-textarea {
-    overflow: auto;
-    vertical-align: top;
-}
-
-textarea {
-    resize: vertical;
-}
-
 .form-bg .btn {
-    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 10pt;
     letter-spacing: 2pt;
@@ -675,10 +634,10 @@ footer h4 {
 
 }
 
-/* Animation-Scroll */
+/* Animation Scroll */
 [data-anime] {
     opacity: 0;
-    transition: 2.2s;
+    transition: 0.3s;
 }
 
 [data-anime="header-left"] {
@@ -706,16 +665,17 @@ footer h4 {
     transform: translate3d(0px, 0px, 0px);
 }
 
+/* Animation Scroll Voluntary */
 .anime-left {
     opacity: 0;
     transform: translate3d(-50px, 0, 0);
-    transition: 1.2s;
+    transition: 0.5s;
 }
 
 .anime-right {
     opacity: 0;
     transform: translate3d(50px, 0, 0);
-    transition: 1.2s;
+    transition: 0.5s;
 }
 
 .anime-start {

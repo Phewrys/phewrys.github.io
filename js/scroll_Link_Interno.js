@@ -1,23 +1,28 @@
+// https://www.youtube.com/watch?v=tzbpAqb2Wjc&list=LLNSJDO4FhPCoC8_341tbGmg&index=135&t=7s
 
-// const menuItems = document.querySelectorAll('.menu a[href^="#"]');
 
-// menuItems.forEach(item => {
-//     item.addEventListener('click', scrollToIdOnClick);
-// })
+/* Method 1
+const menuItems = document.querySelectorAll('.menu a[href^="#"]');
 
-// function scrollToIdOnClick(event) {
-//     event.preventDefault();
-//     const element = event.target;
-//     const id = element.getAttribute('href');
-//     const to = document.querySelector(id).offsetTop;
+menuItems.forEach(item => {
+    item.addEventListener('click', scrollToIdOnClick);
+})
+
+function scrollToIdOnClick(event) {
+    event.preventDefault();
+    const element = event.target;
+    const id = element.getAttribute('href');
+    const to = document.querySelector(id).offsetTop;
     
-//     window.scroll({
-//         top: to - 60,
-//         behavior: "smooth",
-//     });
-// }
+    window.scroll({
+        top: to - 60,
+        behavior: "smooth",
+    });
+}
+*/
 
-//
+
+// Method 2 - With separate functions
 const menuItems = document.querySelectorAll('.menu a[href^="#"]');
 
 menuItems.forEach(item => {
@@ -36,13 +41,17 @@ function scrollToIdOnClick(event) {
 }
 
 function scrollToPosition(to) {
-  // window.scroll({
-  //   top: to,
-  //   behavior: "smooth",
-  // });
-  smoothScrollTo(0, to);
+/* Works only on some browsers
+  window.scroll({
+    top: to,
+    behavior: "smooth",
+  });
+*/
+  smoothScrollTo(0, to); // Works on all browsers
 }
 
+
+// ALLOWS SCROLL TO WORK ON ALL BROWSERS
 /**
  * Smooth scroll animation
  * @param {int} endX: destination x coordinate
@@ -74,27 +83,3 @@ function smoothScrollTo(endX, endY, duration) {
     window.scroll(newX, newY);
   }, 1000 / 60); // 60 fps
 };
-
-
-
-
-
-function typeWrite(elemento){
-    const textoArray = elemento.innerHTML.split('');
-    elemento.innerHTML = ' ';
-    textoArray.forEach(function(letra, i){   
-      
-    setTimeout(function(){
-        elemento.innerHTML += letra;
-    }, 100 * i)
-
-  });
-}
-const titulo = document.querySelector('.titulo-principal');
-typeWrite(titulo);
-
-
-
-
-
-$('body').css('display', 'none')
