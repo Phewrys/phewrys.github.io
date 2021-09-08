@@ -21,13 +21,14 @@ const target = document.querySelectorAll('[data-anime]');
 const animationClass = 'animate';
 
 function animeScroll() {
-    const windowTop = window.pageYOffset + 600;
+    const windowTop = window.pageYOffset + 800;
     target.forEach(function (element) {
         if ((windowTop) > element.offsetTop) {
             element.classList.add(animationClass);
-        } else {
-            element.classList.remove(animationClass);
-        }
+        } 
+        // else {
+        //     element.classList.remove(animationClass);
+        // }
     })
 }
 
@@ -54,9 +55,10 @@ if (target.length) {
             var itemTop = $(this).offset().top;
             if (documentTop > itemTop - offset) {
                 $(this).addClass(animationClass);
-            } else {
-                $(this).removeClass(animationClass);
-            }
+            } 
+            // else {
+            //     $(this).removeClass(animationClass);
+            // }
         });
     }
 
@@ -79,9 +81,10 @@ if (target.length) {
             var itemTop = $(this).offset().top;
             if (documentTop > itemTop - offset) {
                 $(this).addClass(animationClass);
-            } else {
-                $(this).removeClass(animationClass);
-            }
+            } 
+            // else {
+            //     $(this).removeClass(animationClass);
+            // }
         });
     }
 

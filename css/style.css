@@ -24,16 +24,20 @@ body {
 }
 
 body::-webkit-scrollbar {
-    width: 1em;
+    width: 15px;
 }
- 
+
 body::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
- 
+
 body::-webkit-scrollbar-thumb {
     background-color: #00fff3;
-    outline: 1px solid slategrey;
+    border: solid 4px #171819;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #d2cbe4;
 }
 
 [text-color] {
@@ -83,6 +87,7 @@ section#header {
     left: 0;
     z-index: 1000;
     background-color: #1b1b1b;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 15%);
 }
 
 div#logo {
@@ -144,8 +149,26 @@ section.home {
     align-items: center;
     justify-content: center;
     margin-top: -30px;
-    height: 615px;
+    height: 750px;
     overflow: hidden;
+}
+
+@media (max-width: 992px) {
+    section.home {
+        height: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    section.home {
+        height: 450px;
+    }
+}
+
+@media (max-width: 576px) {
+    section.home {
+        height: 300px;
+    }
 }
 
 section.home span {
@@ -162,20 +185,6 @@ section.home h1 {
 
 section.home i {
     color: #00fff3;
-}
-
-.imgHome {
-    position: absolute;
-    z-index: -1000;
-    height: 100%;
-    display: table;
-    width: 100%;
-    padding: 100px 0;
-    color: white;
-    background: url('../imgs/about.jpg') no-repeat bottom center scroll;
-    background-position: 25% 45%;
-    background-size: cover;
-    opacity: 50%;
 }
 
 .line {
@@ -231,9 +240,10 @@ section.home i {
 
 /* About */
 section#about {
-    padding: 50px 0 100px 0;
+    padding: 75px 0;
     background-color: #2d2e32;
     margin-top: -15px;
+    box-shadow: 0px -1px 300px #00fff3;
 }
 
 section#about p {
@@ -264,7 +274,7 @@ section#about img {
     color: #00fff3;
     border: 1px solid #00fff3;
     font-size: 18px;
-    transition: 1s ease-in-out !important;
+    transition: 0.5s ease-in-out !important;
 }
   
 svg {
@@ -303,7 +313,7 @@ section#skills {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0px 50px 100px 50px;
+    padding: 75px 50px 150px 50px;
     --bg-opacity: 1;
     background-color: #25262a;
 }
@@ -324,7 +334,7 @@ section#skills > div > div {
 }
 
 section#skills > div > div > div {
-    border-radius: 0%;
+    border-radius: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -332,24 +342,23 @@ section#skills > div > div > div {
     font-size: 14pt;
     margin: 15px;
     color: #00fff3;
-    transition: 0.7s ease-in-out;
+    transition: 0.3s ease-in-out;
     height: 200px;
     width: 200px;
-    background-color: #18191a;
+    box-shadow: 0px 0px 50px black;
 }
 
 section#skills > div > div > div:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+    box-shadow: 5px 5px 5px #00fff3;
 }
 
 section#skills > div > div > div i {
-    transition: 0.7s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 section#skills > div > div > div:hover i {
-    transform: rotateY(360deg);
     color: #00fff3 !important;
-    box-shadow: 5px 5px 50px #00fff3;
 }
 
 .sSon1 {
@@ -363,6 +372,22 @@ section#skills > div > div > div:hover i {
     flex-wrap: wrap;
 }
 
+.font-weight-bold {
+    color: #6c757d;
+}
+
+section#skills > div > div > div div {
+    color: #6c757d;
+    transition: 0.3s ease-in-out;
+}
+section#skills > div > div > div:hover div {
+    color: #00fff3 !important;
+}
+
+#section#skills > div > div:hover  > div > .font-weight-bold {
+    display: none;
+}
+
 /* Project */
 section#project {
     flex-direction: column;
@@ -370,12 +395,13 @@ section#project {
     justify-content: center;
     height: auto;
     display: flex;
-    padding: 0 0 100px 0;
+    padding: 75px 0 150px 0;
     background-color: #2d2e32;
 }
 
 section#project div div {
     overflow: hidden;
+    box-shadow: 5px 5px 50px black;
 }
 
 #imgLogo {
@@ -383,7 +409,6 @@ section#project div div {
     min-height: 120px;
     max-width: 340px;
     max-height: 250px;
-    margin: 5px;
 }
 
 [proj] {
@@ -396,7 +421,7 @@ section#project div div {
     padding: 10px;
     box-sizing: border-box;
     transition: opacity 1s;
-    transition: 1s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 [proj]:hover {
@@ -416,7 +441,7 @@ section#workExperience {
     justify-content: center;
     height: auto;
     display: flex;
-    padding: 0 0 100px 0;
+    padding: 75px 0;
     background-color: #25262a;
     overflow: hidden;
 }
@@ -448,20 +473,23 @@ section#workExperience img {
 /* Voluntary */
 section#voluntary {
     border-bottom: solid 5px rgba(100, 100, 100, 0);
-    padding: 0 0 50px 0;
+    padding: 75px 0;
     background-color: #2d2e32;
     overflow: hidden;
 }
 
 /* Contact */
+section#contact {
+    padding: 75px 0;
+}
+
 section#contact span {
     overflow: hidden;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 section#contact span:hover {
     color: #00fff3 !important;
-    box-shadow: 5px 5px 50px #00fff3;
 }
 
 [pForm] {
@@ -511,6 +539,11 @@ textarea {
     line-height: normal;
 }
 
+.form-bg {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
 .form-bg .email {
     margin-top: 30px;
     width: 100%;
@@ -558,7 +591,7 @@ textarea {
 
 [formBtn] {
     background: transparent;
-    transition: 1s ease-in-out;
+    transition: 0.3s ease-in-out;
     color: #00fff3;
     border: 1px solid #00fff3;
 }
@@ -612,12 +645,12 @@ button {
 [whatsApp] {
     border-radius: 50%;
     text-decoration: none;
-    color: #4dc247;
-    transition: 0.5s ease-in-out;
+    color: #00fff3;
+    transition: 0.3s ease-in-out;
 }
 
 [whatsApp]:hover {
-    box-shadow: 5px 5px 50px #4dc247;
+    box-shadow: 5px 5px 50px #00fff3;
 }
 
 /* Footer */
@@ -633,7 +666,6 @@ footer h4 {
     font-size: 16px;
     font-weight: 400;
     color: #ffffff8c;
-
 }
 
 /* Animation Scroll */
@@ -671,13 +703,13 @@ footer h4 {
 .anime-left {
     opacity: 0;
     transform: translate3d(-50px, 0, 0);
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .anime-right {
     opacity: 0;
     transform: translate3d(50px, 0, 0);
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .anime-start {
