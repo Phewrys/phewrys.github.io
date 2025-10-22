@@ -57,7 +57,9 @@ export default function Experience() {
             {workExperience.map((exp, index) => (
               <div
                 key={exp.id}
-                ref={el => (itemsRef.current[index] = el)}
+                ref={el => {
+                  itemsRef.current[index] = el
+                }}
                 className={`relative flex items-center ${
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                 }`}

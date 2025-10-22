@@ -50,7 +50,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
     >
       <div className='relative overflow-hidden rounded-xl border border-border bg-card hover:shadow-2xl transition-all duration-300'>
         {/* Image */}
-        <div className='relative h-48 overflow-hidden bg-muted'>
+        <div className='relative h-48 overflow-hidden bg-muted rounded-t-xl'>
           <ImageWithFallback
             src={project.image}
             alt={project.title[language]}

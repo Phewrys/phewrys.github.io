@@ -16,7 +16,7 @@ export const projects: Project[] = [
     demoUrl: 'https://demo.example.com',
     githubUrl: 'https://github.com/Phewrys/ecommerce',
     technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
-    inProgress: false,
+    inProgress: true,
   },
   {
     id: '2',
@@ -33,7 +33,7 @@ export const projects: Project[] = [
     demoUrl: 'https://demo.example.com',
     githubUrl: 'https://github.com/Phewrys/analytics',
     technologies: ['React', 'Vue.js', 'Sass', 'Jest', 'Webpack'],
-    inProgress: false,
+    inProgress: true,
   },
   {
     id: '3',
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     demoUrl: 'https://demo.example.com',
     githubUrl: 'https://github.com/Phewrys/tasks',
     technologies: ['JavaScript', 'React', 'Bootstrap', 'REST APIs'],
-    inProgress: false,
+    inProgress: true,
   },
   {
     id: '4',
