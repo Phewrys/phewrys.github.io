@@ -6,6 +6,7 @@ import { translations, workExperience } from '../data/content'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Briefcase, MapPin, Calendar } from 'lucide-react'
+import { ImageWithFallback } from './figma/ImageWithFallback'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -141,8 +142,12 @@ export default function Experience() {
         <div className='mt-20 p-6 bg-background border border-border rounded-xl'>
           <h3 className='mb-4 text-xl'>{t.experience.educationTitle}</h3>
           <div className='flex items-start gap-4'>
-            <div className='w-12 h-12 bg-black dark:bg-white rounded-xl flex items-center justify-center flex-shrink-0'>
-              <span className='text-3xl'>🎓</span>
+            <div className='w-12 h-12 bg-black dark:bg-white rounded-xl flex items-center justify-center shrink-0 mt-1.5'>
+              <ImageWithFallback
+                src='/assets/ufs.webp'
+                alt='Logo UFS'
+                className='w-full h-full object-cover rounded-lg'
+              />
             </div>
             <div>
               <p className='dark:text-white mb-1'>

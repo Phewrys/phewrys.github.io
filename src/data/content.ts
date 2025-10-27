@@ -11,8 +11,7 @@ export const projects: Project[] = [
       en: 'Modern e-commerce solution with real-time inventory and seamless checkout experience',
       pt: 'Solução de e-commerce moderna com inventário em tempo real e experiência de checkout perfeita',
     },
-    image:
-      'https://images.unsplash.com/photo-1658297063569-162817482fb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjBwbGF0Zm9ybXxlbnwxfHx8fDE3NjA4MzkxMzl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: '/assets/p1.webp',
     demoUrl: 'https://demo.example.com',
     githubUrl: 'https://github.com/Phewrys/ecommerce',
     technologies: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS'],
@@ -28,8 +27,7 @@ export const projects: Project[] = [
       en: 'Interactive data visualization dashboard with advanced filtering and real-time updates',
       pt: 'Painel de visualização de dados interativo com filtragem avançada e atualizações em tempo real',
     },
-    image:
-      'https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhbmFseXRpY3MlMjBkYXNoYm9hcmR8ZW58MXx8fHwxNzYwODY0NjEzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: '/assets/p2.webp',
     demoUrl: 'https://demo.example.com',
     githubUrl: 'https://github.com/Phewrys/analytics',
     technologies: ['React', 'Vue.js', 'Sass', 'Jest', 'Webpack'],
@@ -45,8 +43,7 @@ export const projects: Project[] = [
       en: 'Collaborative task management with drag-and-drop, real-time sync, and team features',
       pt: 'Gerenciamento colaborativo de tarefas com arrastar e soltar, sincronização em tempo real e recursos de equipe',
     },
-    image:
-      'https://images.unsplash.com/photo-1611224923853-80b023f02d71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0YXNrJTIwbWFuYWdlbWVudHxlbnwxfHx8fDE3NjA5MDIxMjJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: '/assets/p3.webp',
     demoUrl: 'https://demo.example.com',
     githubUrl: 'https://github.com/Phewrys/tasks',
     technologies: ['JavaScript', 'React', 'Bootstrap', 'REST APIs'],
@@ -62,8 +59,7 @@ export const projects: Project[] = [
       en: 'Unified dashboard for managing multiple social media accounts and scheduling posts',
       pt: 'Painel unificado para gerenciar várias contas de redes sociais e agendar postagens',
     },
-    image:
-      'https://images.unsplash.com/photo-1579869847557-1f67382cc158?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxzb2NpYWwlMjBtZWRpYXxlbnwxfHx8fDE3NjA4NzE4MzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: '/assets/p4.webp',
     demoUrl: 'https://demo.example.com',
     githubUrl: 'https://github.com/Phewrys/social',
     technologies: ['React', 'Vue.js', 'Sass', 'Jest', 'Webpack'],
@@ -79,8 +75,7 @@ export const projects: Project[] = [
       en: 'Drag-and-drop portfolio builder with customizable themes and SEO optimization',
       pt: 'Construtor de portfólio arrastar e soltar com temas personalizáveis e otimização SEO',
     },
-    image:
-      'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0Zm9saW8lMjB3ZWJzaXRlfGVufDF8fHx8MTc2MDgzNDI1N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: '/assets/p5.webp',
     demoUrl: 'https://demo.example.com',
     githubUrl: 'https://github.com/Phewrys/portfolio-builder',
     technologies: ['JavaScript', 'React', 'Git', 'REST APIs'],
@@ -96,8 +91,7 @@ export const projects: Project[] = [
       en: 'AI-powered content creation tool with multiple templates and export options',
       pt: 'Ferramenta de criação de conteúdo com IA com múltiplos modelos e opções de exportação',
     },
-    image:
-      'https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlfGVufDF8fHx8MTc2MDgyNTUxNnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    image: '/assets/p6.webp',
     demoUrl: 'https://demo.example.com',
     githubUrl: 'https://github.com/Phewrys/portfolio-builder',
     technologies: ['JavaScript', 'React', 'Git', 'REST APIs'],
@@ -114,7 +108,7 @@ export const workExperience: WorkExperience[] = [
       pt: 'Banese Card',
     },
     position: {
-      en: 'Pleno Frontend Developer',
+      en: 'Mid-level Frontend Developer',
       pt: 'Desenvolvedor Frontend Pleno',
     },
     location: {

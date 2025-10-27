@@ -6,6 +6,7 @@ import { translations } from '../data/content'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ImageWithFallback } from './figma/ImageWithFallback'
+
 gsap.registerPlugin(ScrollTrigger)
 
 const technologies = [
@@ -89,10 +90,10 @@ export default function About() {
         <div className='grid md:grid-cols-2 gap-12 items-center mb-20'>
           <div ref={imageRef} className='flex justify-center'>
             <div className='relative'>
-              <div className='absolute inset-0 bg-gradient-to-br from-foreground to-muted rounded-full blur-2xl opacity-20' />
+              <div className='absolute inset-0 bg-linear-to-br from-foreground to-muted rounded-full blur-2xl opacity-20' />
               <div className='relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-foreground/10 overflow-hidden'>
                 <ImageWithFallback
-                  src='/assets/profile_photo.jpg'
+                  src='/assets/profile_photo.webp'
                   alt='Thiago - Frontend Developer'
                   className='w-full h-full object-cover'
                 />
@@ -130,7 +131,7 @@ export default function About() {
             {technologies.map(tech => (
               <div
                 key={tech.name}
-                className='group p-6 border border-border rounded-xl hover:bg-accent transition-all duration-300 hover:scale-105 cursor-pointer'
+                className='group p-6 border border-border rounded-xl transition-all duration-300 hover:scale-105 cursor-pointer'
               >
                 <div className='flex flex-col items-center gap-3'>
                   {/* <span className="text-3xl">{tech.icon}</span> */}

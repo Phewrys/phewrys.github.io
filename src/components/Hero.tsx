@@ -162,6 +162,7 @@ export default function Hero() {
               href={link.url}
               target='_blank'
               rel='noopener noreferrer'
+              aria-label='Icone'
               className='p-3 bg-background rounded-lg border-gray-200 dark:border-gray-800 hover:border-gray-400 dark:hover:border-gray-600 transition-all hover:shadow-sm hover:bg-accent'
             >
               <link.icon className='w-6 h-6' />

@@ -41,7 +41,7 @@ export default function Header() {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className='flex items-center gap-2 hover:opacity-80 transition-opacity'
           >
-            <div className='w-10 h-10 rounded-full bg-gradient-to-br from-foreground to-muted-foreground flex items-center justify-center'>
+            <div className='cursor-pointer w-10 h-10 rounded-full bg-linear-to-br from-foreground to-muted-foreground flex items-center justify-center'>
               <span className='text-background'>T</span>
             </div>
           </button>
@@ -49,25 +49,25 @@ export default function Header() {
           <nav className='hidden md:flex items-center gap-8'>
             <button
               onClick={() => scrollToSection('about')}
-              className='hover:text-muted-foreground transition-colors'
+              className='hover:text-muted-foreground transition-colors cursor-pointer'
             >
               {t.nav.about}
             </button>
             <button
               onClick={() => scrollToSection('experience')}
-              className='hover:text-muted-foreground transition-colors'
+              className='hover:text-muted-foreground transition-colors cursor-pointer'
             >
               {t.nav.experience}
             </button>
             <button
               onClick={() => scrollToSection('projects')}
-              className='hover:text-muted-foreground transition-colors'
+              className='hover:text-muted-foreground transition-colors cursor-pointer'
             >
               {t.nav.projects}
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className='hover:text-muted-foreground transition-colors'
+              className='hover:text-muted-foreground transition-colors cursor-pointer'
             >
               {t.nav.contact}
             </button>
@@ -76,14 +76,14 @@ export default function Header() {
           <div className='flex items-center gap-3'>
             <button
               onClick={() => setLanguage(language === 'en' ? 'pt' : 'en')}
-              className='p-2 hover:bg-accent rounded-lg transition-colors'
+              className='p-2 hover:bg-accent rounded-lg transition-colors cursor-pointer'
               aria-label='Toggle language'
             >
               <Globe className='w-5 h-5' />
             </button>
             <button
               onClick={toggleTheme}
-              className='p-2 hover:bg-accent rounded-lg transition-colors'
+              className='p-2 hover:bg-accent rounded-lg transition-colors cursor-pointer'
               aria-label='Toggle theme'
             >
               {theme === 'light' ? (

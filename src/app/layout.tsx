@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   authors: [{ name: 'Tiago Alves de Farias (@phewrys)' }],
   keywords:
     'phewrys,tiago alves,thiago alves,tiago alves de farias,freelancer,front,end',
+  description:
+    'Frontend Developer skilled in React, Next.js, Tailwind CSS, GSAP, ... Explore projects showcasing clean code, animations, and modern responsive design.',
 }
 
 export default function RootLayout({
